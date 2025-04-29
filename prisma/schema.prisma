@@ -19,5 +19,6 @@ model Todo {
   content   String
   createdAt DateTime  @default(now())
   updatedAt DateTime?
-  deletedAt DateTime?
+  deletedAt DateTime? 
+  
 }
