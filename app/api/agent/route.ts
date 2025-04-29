@@ -27,7 +27,8 @@ export async function POST(req: NextRequest) {
     - If it's a "delete", return: { "action": "delete", "old": "..." }
     - If it's an "update", return: { "action": "update", "old": "...", "content": "..." }
     - If no actionable command is found, return: { "action": "none", "content": null }
-    
+    - If the user's command does **not clearly** match the patterns above, **do not guess**. Just return: { "action": "none", "content": null }
+
     Examples:
     Command: "I want to read a book"
     → { "action": "add", "content": "read a book" }
